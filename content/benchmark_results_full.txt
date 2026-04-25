@@ -1,0 +1,631 @@
+   Compiling interps v0.1.0 (wasm-interp/interps)
+   Compiling wasm-interp-benches v0.1.0 (wasm-interp/benches)
+    Finished `bench` profile [optimized] target(s) in 2.94s
+     Running unittests src/lib.rs (wasm-interp/target/release/deps/bench_utils-ac69815488b6221a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running benches/end_to_end.rs (wasm-interp/target/release/deps/end_to_end-ab15684826d1d247)
+Gnuplot not found, using plotters backend
+Benchmarking end_to_end/tinywasm/e2e/simple_math
+Benchmarking end_to_end/tinywasm/e2e/simple_math: Warming up for 3.0000 s
+Benchmarking end_to_end/tinywasm/e2e/simple_math: Collecting 100 samples in estimated 5.0846 s (192k iterations)
+Benchmarking end_to_end/tinywasm/e2e/simple_math: Analyzing
+end_to_end/tinywasm/e2e/simple_math
+                        time:   [26.605 µs 26.656 µs 26.705 µs]
+                        change: [+1.2292% +1.5180% +1.7989%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) low mild
+  1 (1.00%) high mild
+Benchmarking end_to_end/tinywasm/e2e/fibonacci
+Benchmarking end_to_end/tinywasm/e2e/fibonacci: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 5.3s, enable flat sampling, or reduce sample count to 60.
+Benchmarking end_to_end/tinywasm/e2e/fibonacci: Collecting 100 samples in estimated 5.3165 s (5050 iterations)
+Benchmarking end_to_end/tinywasm/e2e/fibonacci: Analyzing
+end_to_end/tinywasm/e2e/fibonacci
+                        time:   [1.0608 ms 1.0632 ms 1.0655 ms]
+                        change: [-0.8259% -0.5354% -0.2600%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) low mild
+Benchmarking end_to_end/wasmi/e2e/simple_math
+Benchmarking end_to_end/wasmi/e2e/simple_math: Warming up for 3.0000 s
+Benchmarking end_to_end/wasmi/e2e/simple_math: Collecting 100 samples in estimated 5.0292 s (490k iterations)
+Benchmarking end_to_end/wasmi/e2e/simple_math: Analyzing
+end_to_end/wasmi/e2e/simple_math
+                        time:   [10.200 µs 10.217 µs 10.233 µs]
+                        change: [+1.5018% +1.7766% +2.0829%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+Benchmarking end_to_end/wasmi/e2e/fibonacci
+Benchmarking end_to_end/wasmi/e2e/fibonacci: Warming up for 3.0000 s
+Benchmarking end_to_end/wasmi/e2e/fibonacci: Collecting 100 samples in estimated 6.3495 s (20k iterations)
+Benchmarking end_to_end/wasmi/e2e/fibonacci: Analyzing
+end_to_end/wasmi/e2e/fibonacci
+                        time:   [314.45 µs 315.35 µs 316.43 µs]
+                        change: [-0.6200% -0.3232% -0.0377%] (p = 0.04 < 0.05)
+                        Change within noise threshold.
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking end_to_end/wasmtime_pulley64/e2e/simple_math
+Benchmarking end_to_end/wasmtime_pulley64/e2e/simple_math: Warming up for 3.0000 s
+Benchmarking end_to_end/wasmtime_pulley64/e2e/simple_math: Collecting 100 samples in estimated 5.4637 s (30k iterations)
+Benchmarking end_to_end/wasmtime_pulley64/e2e/simple_math: Analyzing
+end_to_end/wasmtime_pulley64/e2e/simple_math
+                        time:   [179.14 µs 179.53 µs 179.95 µs]
+                        change: [-0.5066% -0.1928% +0.0950%] (p = 0.22 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking end_to_end/wasmtime_pulley64/e2e/fibonacci
+Benchmarking end_to_end/wasmtime_pulley64/e2e/fibonacci: Warming up for 3.0000 s
+Benchmarking end_to_end/wasmtime_pulley64/e2e/fibonacci: Collecting 100 samples in estimated 6.1771 s (10k iterations)
+Benchmarking end_to_end/wasmtime_pulley64/e2e/fibonacci: Analyzing
+end_to_end/wasmtime_pulley64/e2e/fibonacci
+                        time:   [608.71 µs 610.03 µs 611.31 µs]
+                        change: [-1.1072% -0.8669% -0.6123%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking end_to_end/wasmtime_jit/e2e/simple_math
+Benchmarking end_to_end/wasmtime_jit/e2e/simple_math: Warming up for 3.0000 s
+Benchmarking end_to_end/wasmtime_jit/e2e/simple_math: Collecting 100 samples in estimated 5.5644 s (30k iterations)
+Benchmarking end_to_end/wasmtime_jit/e2e/simple_math: Analyzing
+end_to_end/wasmtime_jit/e2e/simple_math
+                        time:   [180.69 µs 181.13 µs 181.57 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking end_to_end/wasmtime_jit/e2e/fibonacci
+Benchmarking end_to_end/wasmtime_jit/e2e/fibonacci: Warming up for 3.0000 s
+Benchmarking end_to_end/wasmtime_jit/e2e/fibonacci: Collecting 100 samples in estimated 5.5203 s (20k iterations)
+Benchmarking end_to_end/wasmtime_jit/e2e/fibonacci: Analyzing
+end_to_end/wasmtime_jit/e2e/fibonacci
+                        time:   [271.50 µs 272.11 µs 272.72 µs]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+
+     Running benches/execution.rs (wasm-interp/target/release/deps/execution-3b80513d28a6bc23)
+Gnuplot not found, using plotters backend
+Benchmarking execution/wasmi/execute_warm/simple_math
+Benchmarking execution/wasmi/execute_warm/simple_math: Warming up for 3.0000 s
+Benchmarking execution/wasmi/execute_warm/simple_math: Collecting 100 samples in estimated 5.0347 s (449k iterations)
+Benchmarking execution/wasmi/execute_warm/simple_math: Analyzing
+execution/wasmi/execute_warm/simple_math
+                        time:   [6.0979 µs 6.1203 µs 6.1437 µs]
+                        change: [-0.8131% -0.4262% -0.0516%] (p = 0.04 < 0.05)
+                        Change within noise threshold.
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) low mild
+  3 (3.00%) high mild
+Benchmarking execution/wasmi/execute_warm/fibonacci
+Benchmarking execution/wasmi/execute_warm/fibonacci: Warming up for 3.0000 s
+Benchmarking execution/wasmi/execute_warm/fibonacci: Collecting 100 samples in estimated 6.6422 s (20k iterations)
+Benchmarking execution/wasmi/execute_warm/fibonacci: Analyzing
+execution/wasmi/execute_warm/fibonacci
+                        time:   [324.05 µs 324.77 µs 325.59 µs]
+                        change: [+1.4673% +1.7451% +2.0173%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking execution/wasmtime_pulley64/execute_warm/simple_math
+Benchmarking execution/wasmtime_pulley64/execute_warm/simple_math: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_pulley64/execute_warm/simple_math: Collecting 100 samples in estimated 5.7481 s (30k iterations)
+Benchmarking execution/wasmtime_pulley64/execute_warm/simple_math: Analyzing
+execution/wasmtime_pulley64/execute_warm/simple_math
+                        time:   [9.0143 µs 9.0835 µs 9.1563 µs]
+                        change: [-4.1454% -2.4644% -0.2667%] (p = 0.01 < 0.05)
+                        Change within noise threshold.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking execution/wasmtime_pulley64/execute_warm/fibonacci
+Benchmarking execution/wasmtime_pulley64/execute_warm/fibonacci: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_pulley64/execute_warm/fibonacci: Collecting 100 samples in estimated 6.3750 s (10k iterations)
+Benchmarking execution/wasmtime_pulley64/execute_warm/fibonacci: Analyzing
+execution/wasmtime_pulley64/execute_warm/fibonacci
+                        time:   [395.42 µs 396.78 µs 398.66 µs]
+                        change: [+2.8499% +3.3158% +3.7758%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high severe
+Benchmarking execution/wasmtime_jit/execute_warm/simple_math
+Benchmarking execution/wasmtime_jit/execute_warm/simple_math: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_jit/execute_warm/simple_math: Collecting 100 samples in estimated 5.9784 s (30k iterations)
+Benchmarking execution/wasmtime_jit/execute_warm/simple_math: Analyzing
+execution/wasmtime_jit/execute_warm/simple_math
+                        time:   [7.7794 µs 7.8957 µs 8.0130 µs]
+Found 7 outliers among 100 measurements (7.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+Benchmarking execution/wasmtime_jit/execute_warm/fibonacci
+Benchmarking execution/wasmtime_jit/execute_warm/fibonacci: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_jit/execute_warm/fibonacci: Collecting 100 samples in estimated 5.9603 s (20k iterations)
+Benchmarking execution/wasmtime_jit/execute_warm/fibonacci: Analyzing
+execution/wasmtime_jit/execute_warm/fibonacci
+                        time:   [43.847 µs 44.030 µs 44.231 µs]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) low mild
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking execution/tinywasm/execute_cold/simple_math
+Benchmarking execution/tinywasm/execute_cold/simple_math: Warming up for 3.0000 s
+Benchmarking execution/tinywasm/execute_cold/simple_math: Collecting 100 samples in estimated 5.1012 s (182k iterations)
+Benchmarking execution/tinywasm/execute_cold/simple_math: Analyzing
+execution/tinywasm/execute_cold/simple_math
+                        time:   [26.426 µs 26.489 µs 26.547 µs]
+                        change: [+5.1021% +5.5143% +5.8899%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Benchmarking execution/tinywasm/execute_cold/fibonacci
+Benchmarking execution/tinywasm/execute_cold/fibonacci: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 5.7s, enable flat sampling, or reduce sample count to 60.
+Benchmarking execution/tinywasm/execute_cold/fibonacci: Collecting 100 samples in estimated 5.6710 s (5050 iterations)
+Benchmarking execution/tinywasm/execute_cold/fibonacci: Analyzing
+execution/tinywasm/execute_cold/fibonacci
+                        time:   [1.1169 ms 1.1186 ms 1.1202 ms]
+                        change: [+2.1738% +2.3969% +2.6254%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) low mild
+Benchmarking execution/wasmi/execute_cold/simple_math
+Benchmarking execution/wasmi/execute_cold/simple_math: Warming up for 3.0000 s
+Benchmarking execution/wasmi/execute_cold/simple_math: Collecting 100 samples in estimated 5.0094 s (460k iterations)
+Benchmarking execution/wasmi/execute_cold/simple_math: Analyzing
+execution/wasmi/execute_cold/simple_math
+                        time:   [7.2235 µs 7.2419 µs 7.2614 µs]
+                        change: [-0.4991% -0.1956% +0.0822%] (p = 0.20 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking execution/wasmi/execute_cold/fibonacci
+Benchmarking execution/wasmi/execute_cold/fibonacci: Warming up for 3.0000 s
+Benchmarking execution/wasmi/execute_cold/fibonacci: Collecting 100 samples in estimated 5.0829 s (15k iterations)
+Benchmarking execution/wasmi/execute_cold/fibonacci: Analyzing
+execution/wasmi/execute_cold/fibonacci
+                        time:   [331.03 µs 331.83 µs 332.73 µs]
+                        change: [+1.8449% +2.1560% +2.4737%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking execution/wasmtime_pulley64/execute_cold/simple_math
+Benchmarking execution/wasmtime_pulley64/execute_cold/simple_math: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_pulley64/execute_cold/simple_math: Collecting 100 samples in estimated 5.7054 s (30k iterations)
+Benchmarking execution/wasmtime_pulley64/execute_cold/simple_math: Analyzing
+execution/wasmtime_pulley64/execute_cold/simple_math
+                        time:   [12.425 µs 12.482 µs 12.537 µs]
+                        change: [-4.0815% -3.3629% -2.6661%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking execution/wasmtime_pulley64/execute_cold/fibonacci
+Benchmarking execution/wasmtime_pulley64/execute_cold/fibonacci: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_pulley64/execute_cold/fibonacci: Collecting 100 samples in estimated 6.4144 s (10k iterations)
+Benchmarking execution/wasmtime_pulley64/execute_cold/fibonacci: Analyzing
+execution/wasmtime_pulley64/execute_cold/fibonacci
+                        time:   [398.19 µs 398.79 µs 399.38 µs]
+                        change: [+0.4570% +0.8767% +1.2434%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) low mild
+  2 (2.00%) high mild
+Benchmarking execution/wasmtime_jit/execute_cold/simple_math
+Benchmarking execution/wasmtime_jit/execute_cold/simple_math: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_jit/execute_cold/simple_math: Collecting 100 samples in estimated 5.9365 s (30k iterations)
+Benchmarking execution/wasmtime_jit/execute_cold/simple_math: Analyzing
+execution/wasmtime_jit/execute_cold/simple_math
+                        time:   [11.047 µs 11.205 µs 11.378 µs]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+Benchmarking execution/wasmtime_jit/execute_cold/fibonacci
+Benchmarking execution/wasmtime_jit/execute_cold/fibonacci: Warming up for 3.0000 s
+Benchmarking execution/wasmtime_jit/execute_cold/fibonacci: Collecting 100 samples in estimated 5.8870 s (20k iterations)
+Benchmarking execution/wasmtime_jit/execute_cold/fibonacci: Analyzing
+execution/wasmtime_jit/execute_cold/fibonacci
+                        time:   [46.644 µs 46.873 µs 47.117 µs]
+Found 9 outliers among 100 measurements (9.00%)
+  2 (2.00%) low mild
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+
+     Running benches/instantiation.rs (wasm-interp/target/release/deps/instantiation-4b00b6ad03c79612)
+Gnuplot not found, using plotters backend
+Benchmarking instantiation/tinywasm/instantiate/simple_math
+Benchmarking instantiation/tinywasm/instantiate/simple_math: Warming up for 3.0000 s
+Benchmarking instantiation/tinywasm/instantiate/simple_math: Collecting 100 samples in estimated 5.0095 s (1.6M iterations)
+Benchmarking instantiation/tinywasm/instantiate/simple_math: Analyzing
+instantiation/tinywasm/instantiate/simple_math
+                        time:   [11.833 ns 11.916 ns 12.005 ns]
+                        change: [-3.1143% -1.5968% -0.0582%] (p = 0.04 < 0.05)
+                        Change within noise threshold.
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) high mild
+  4 (4.00%) high severe
+Benchmarking instantiation/tinywasm/instantiate/fibonacci
+Benchmarking instantiation/tinywasm/instantiate/fibonacci: Warming up for 3.0000 s
+Benchmarking instantiation/tinywasm/instantiate/fibonacci: Collecting 100 samples in estimated 5.0115 s (1.4M iterations)
+Benchmarking instantiation/tinywasm/instantiate/fibonacci: Analyzing
+instantiation/tinywasm/instantiate/fibonacci
+                        time:   [11.892 ns 11.961 ns 12.035 ns]
+                        change: [-5.2466% -3.1108% -1.0355%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 9 outliers among 100 measurements (9.00%)
+  6 (6.00%) high mild
+  3 (3.00%) high severe
+Benchmarking instantiation/wasmi/instantiate/simple_math
+Benchmarking instantiation/wasmi/instantiate/simple_math: Warming up for 3.0000 s
+Benchmarking instantiation/wasmi/instantiate/simple_math: Collecting 100 samples in estimated 5.0117 s (919k iterations)
+Benchmarking instantiation/wasmi/instantiate/simple_math: Analyzing
+instantiation/wasmi/instantiate/simple_math
+                        time:   [1.1407 µs 1.1454 µs 1.1502 µs]
+                        change: [-2.5125% -1.9007% -1.2734%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) low mild
+  1 (1.00%) high mild
+  2 (2.00%) high severe
+Benchmarking instantiation/wasmi/instantiate/fibonacci
+Benchmarking instantiation/wasmi/instantiate/fibonacci: Warming up for 3.0000 s
+Benchmarking instantiation/wasmi/instantiate/fibonacci: Collecting 100 samples in estimated 5.0219 s (864k iterations)
+Benchmarking instantiation/wasmi/instantiate/fibonacci: Analyzing
+instantiation/wasmi/instantiate/fibonacci
+                        time:   [1.1510 µs 1.1553 µs 1.1596 µs]
+                        change: [-2.8362% -2.1501% -1.4840%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) low mild
+  2 (2.00%) high mild
+Benchmarking instantiation/wasmtime_pulley64/instantiate/simple_math
+Benchmarking instantiation/wasmtime_pulley64/instantiate/simple_math: Warming up for 3.0000 s
+Benchmarking instantiation/wasmtime_pulley64/instantiate/simple_math: Collecting 100 samples in estimated 5.5296 s (30k iterations)
+Benchmarking instantiation/wasmtime_pulley64/instantiate/simple_math: Analyzing
+instantiation/wasmtime_pulley64/instantiate/simple_math
+                        time:   [4.3528 µs 4.4174 µs 4.4834 µs]
+                        change: [-10.830% -0.8851% +5.8515%] (p = 0.86 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+Benchmarking instantiation/wasmtime_pulley64/instantiate/fibonacci
+Benchmarking instantiation/wasmtime_pulley64/instantiate/fibonacci: Warming up for 3.0000 s
+Benchmarking instantiation/wasmtime_pulley64/instantiate/fibonacci: Collecting 100 samples in estimated 6.0587 s (25k iterations)
+Benchmarking instantiation/wasmtime_pulley64/instantiate/fibonacci: Analyzing
+instantiation/wasmtime_pulley64/instantiate/fibonacci
+                        time:   [4.9607 µs 5.8720 µs 7.7941 µs]
+                        change: [+3.2972% +11.138% +24.181%] (p = 0.04 < 0.05)
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking instantiation/wasmtime_jit/instantiate/simple_math
+Benchmarking instantiation/wasmtime_jit/instantiate/simple_math: Warming up for 3.0000 s
+Benchmarking instantiation/wasmtime_jit/instantiate/simple_math: Collecting 100 samples in estimated 5.8410 s (30k iterations)
+Benchmarking instantiation/wasmtime_jit/instantiate/simple_math: Analyzing
+instantiation/wasmtime_jit/instantiate/simple_math
+                        time:   [5.2524 µs 5.3029 µs 5.3519 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) low mild
+Benchmarking instantiation/wasmtime_jit/instantiate/fibonacci
+Benchmarking instantiation/wasmtime_jit/instantiate/fibonacci: Warming up for 3.0000 s
+Benchmarking instantiation/wasmtime_jit/instantiate/fibonacci: Collecting 100 samples in estimated 5.1312 s (20k iterations)
+Benchmarking instantiation/wasmtime_jit/instantiate/fibonacci: Analyzing
+instantiation/wasmtime_jit/instantiate/fibonacci
+                        time:   [5.5012 µs 5.5459 µs 5.5876 µs]
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low severe
+  4 (4.00%) low mild
+
+     Running benches/parsing.rs (wasm-interp/target/release/deps/parsing-891c3136d2e88ff7)
+Gnuplot not found, using plotters backend
+Benchmarking parsing/tinywasm/parse_wasm/simple_math
+Benchmarking parsing/tinywasm/parse_wasm/simple_math: Warming up for 3.0000 s
+Benchmarking parsing/tinywasm/parse_wasm/simple_math: Collecting 100 samples in estimated 5.0046 s (1.7M iterations)
+Benchmarking parsing/tinywasm/parse_wasm/simple_math: Analyzing
+parsing/tinywasm/parse_wasm/simple_math
+                        time:   [2.9172 µs 2.9247 µs 2.9325 µs]
+                        change: [-0.6471% -0.3061% +0.0662%] (p = 0.09 > 0.05)
+                        No change in performance detected.
+Found 9 outliers among 100 measurements (9.00%)
+  4 (4.00%) low mild
+  5 (5.00%) high mild
+Benchmarking parsing/tinywasm/parse_wasm/fibonacci
+Benchmarking parsing/tinywasm/parse_wasm/fibonacci: Warming up for 3.0000 s
+Benchmarking parsing/tinywasm/parse_wasm/fibonacci: Collecting 100 samples in estimated 5.0016 s (1.5M iterations)
+Benchmarking parsing/tinywasm/parse_wasm/fibonacci: Analyzing
+parsing/tinywasm/parse_wasm/fibonacci
+                        time:   [3.3275 µs 3.3393 µs 3.3518 µs]
+                        change: [-1.3538% -0.8803% -0.4142%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low mild
+Benchmarking parsing/wasmi/parse_wasm/simple_math
+Benchmarking parsing/wasmi/parse_wasm/simple_math: Warming up for 3.0000 s
+Benchmarking parsing/wasmi/parse_wasm/simple_math: Collecting 100 samples in estimated 5.0063 s (1.4M iterations)
+Benchmarking parsing/wasmi/parse_wasm/simple_math: Analyzing
+parsing/wasmi/parse_wasm/simple_math
+                        time:   [3.4536 µs 3.4619 µs 3.4708 µs]
+                        change: [-0.2152% +0.1639% +0.5167%] (p = 0.39 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) low mild
+  3 (3.00%) high mild
+Benchmarking parsing/wasmi/parse_wasm/fibonacci
+Benchmarking parsing/wasmi/parse_wasm/fibonacci: Warming up for 3.0000 s
+Benchmarking parsing/wasmi/parse_wasm/fibonacci: Collecting 100 samples in estimated 5.0199 s (1.3M iterations)
+Benchmarking parsing/wasmi/parse_wasm/fibonacci: Analyzing
+parsing/wasmi/parse_wasm/fibonacci
+                        time:   [3.9768 µs 3.9845 µs 3.9914 µs]
+                        change: [-1.5093% -0.5836% +0.2387%] (p = 0.21 > 0.05)
+                        No change in performance detected.
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) low mild
+  5 (5.00%) high mild
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/simple_math
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/simple_math: Warming up for 3.0000 s
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/simple_math: Collecting 100 samples in estimated 5.2997 s (30k iterations)
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/simple_math: Analyzing
+parsing/wasmtime_pulley64/parse_wasm/simple_math
+                        time:   [175.00 µs 175.36 µs 175.73 µs]
+                        change: [-5.3051% -3.8146% -2.4949%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/fibonacci
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/fibonacci: Warming up for 3.0000 s
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/fibonacci: Collecting 100 samples in estimated 5.8678 s (25k iterations)
+Benchmarking parsing/wasmtime_pulley64/parse_wasm/fibonacci: Analyzing
+parsing/wasmtime_pulley64/parse_wasm/fibonacci
+                        time:   [231.92 µs 232.30 µs 232.71 µs]
+                        change: [-0.1963% +0.2679% +0.6795%] (p = 0.25 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking parsing/wasmtime_jit/parse_wasm/simple_math
+Benchmarking parsing/wasmtime_jit/parse_wasm/simple_math: Warming up for 3.0000 s
+Benchmarking parsing/wasmtime_jit/parse_wasm/simple_math: Collecting 100 samples in estimated 5.4502 s (30k iterations)
+Benchmarking parsing/wasmtime_jit/parse_wasm/simple_math: Analyzing
+parsing/wasmtime_jit/parse_wasm/simple_math
+                        time:   [178.70 µs 179.11 µs 179.51 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking parsing/wasmtime_jit/parse_wasm/fibonacci
+Benchmarking parsing/wasmtime_jit/parse_wasm/fibonacci: Warming up for 3.0000 s
+Benchmarking parsing/wasmtime_jit/parse_wasm/fibonacci: Collecting 100 samples in estimated 5.9669 s (25k iterations)
+Benchmarking parsing/wasmtime_jit/parse_wasm/fibonacci: Analyzing
+parsing/wasmtime_jit/parse_wasm/fibonacci
+                        time:   [234.76 µs 235.19 µs 235.65 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+
+     Running benches/tier1.rs (wasm-interp/target/release/deps/tier1-fbf566d994ddc17f)
+Gnuplot not found, using plotters backend
+Benchmarking memory_sequential_read/tinywasm/memory_read
+Benchmarking memory_sequential_read/tinywasm/memory_read: Warming up for 3.0000 s
+Benchmarking memory_sequential_read/tinywasm/memory_read: Collecting 100 samples in estimated 5.8447 s (20k iterations)
+Benchmarking memory_sequential_read/tinywasm/memory_read: Analyzing
+memory_sequential_read/tinywasm/memory_read
+                        time:   [151.26 µs 151.56 µs 151.86 µs]
+                        change: [+0.8066% +1.1927% +1.5782%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low mild
+Benchmarking memory_sequential_read/wasmi/memory_read
+Benchmarking memory_sequential_read/wasmi/memory_read: Warming up for 3.0000 s
+Benchmarking memory_sequential_read/wasmi/memory_read: Collecting 100 samples in estimated 5.0271 s (167k iterations)
+Benchmarking memory_sequential_read/wasmi/memory_read: Analyzing
+memory_sequential_read/wasmi/memory_read
+                        time:   [12.780 µs 12.811 µs 12.841 µs]
+                        change: [-4.9642% -3.0848% -1.4321%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+Benchmarking memory_sequential_read/wasmtime_pulley64/memory_read
+Benchmarking memory_sequential_read/wasmtime_pulley64/memory_read: Warming up for 3.0000 s
+Benchmarking memory_sequential_read/wasmtime_pulley64/memory_read: Collecting 100 samples in estimated 5.9100 s (20k iterations)
+Benchmarking memory_sequential_read/wasmtime_pulley64/memory_read: Analyzing
+memory_sequential_read/wasmtime_pulley64/memory_read
+                        time:   [14.544 µs 14.789 µs 15.107 µs]
+                        change: [-5.9345% -0.7013% +7.2843%] (p = 0.89 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+Benchmarking memory_sequential_read/wasmtime_jit/memory_read
+Benchmarking memory_sequential_read/wasmtime_jit/memory_read: Warming up for 3.0000 s
+Benchmarking memory_sequential_read/wasmtime_jit/memory_read: Collecting 100 samples in estimated 5.8909 s (20k iterations)
+Benchmarking memory_sequential_read/wasmtime_jit/memory_read: Analyzing
+memory_sequential_read/wasmtime_jit/memory_read
+                        time:   [9.3107 µs 9.3946 µs 9.4738 µs]
+
+Benchmarking memory_sequential_write/tinywasm/memory_write
+Benchmarking memory_sequential_write/tinywasm/memory_write: Warming up for 3.0000 s
+Benchmarking memory_sequential_write/tinywasm/memory_write: Collecting 100 samples in estimated 5.1793 s (136k iterations)
+Benchmarking memory_sequential_write/tinywasm/memory_write: Analyzing
+memory_sequential_write/tinywasm/memory_write
+                        time:   [33.814 µs 33.862 µs 33.910 µs]
+                        change: [-0.0570% +0.2923% +0.5835%] (p = 0.07 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking memory_sequential_write/wasmi/memory_write
+Benchmarking memory_sequential_write/wasmi/memory_write: Warming up for 3.0000 s
+Benchmarking memory_sequential_write/wasmi/memory_write: Collecting 100 samples in estimated 5.0993 s (207k iterations)
+Benchmarking memory_sequential_write/wasmi/memory_write: Analyzing
+memory_sequential_write/wasmi/memory_write
+                        time:   [9.4024 µs 9.4229 µs 9.4426 µs]
+                        change: [+0.3424% +0.7492% +1.1485%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low mild
+Benchmarking memory_sequential_write/wasmtime_pulley64/memory_write
+Benchmarking memory_sequential_write/wasmtime_pulley64/memory_write: Warming up for 3.0000 s
+Benchmarking memory_sequential_write/wasmtime_pulley64/memory_write: Collecting 100 samples in estimated 6.0071 s (25k iterations)
+Benchmarking memory_sequential_write/wasmtime_pulley64/memory_write: Analyzing
+memory_sequential_write/wasmtime_pulley64/memory_write
+                        time:   [9.1406 µs 9.2073 µs 9.2718 µs]
+                        change: [-0.9297% +1.1997% +3.2500%] (p = 0.30 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking memory_sequential_write/wasmtime_jit/memory_write
+Benchmarking memory_sequential_write/wasmtime_jit/memory_write: Warming up for 3.0000 s
+Benchmarking memory_sequential_write/wasmtime_jit/memory_write: Collecting 100 samples in estimated 5.0552 s (20k iterations)
+Benchmarking memory_sequential_write/wasmtime_jit/memory_write: Analyzing
+memory_sequential_write/wasmtime_jit/memory_write
+                        time:   [8.2371 µs 8.8528 µs 10.111 µs]
+Found 7 outliers among 100 measurements (7.00%)
+  1 (1.00%) high mild
+  6 (6.00%) high severe
+
+Benchmarking math_float64/tinywasm/dot_product
+Benchmarking math_float64/tinywasm/dot_product: Warming up for 3.0000 s
+Benchmarking math_float64/tinywasm/dot_product: Collecting 100 samples in estimated 5.3338 s (45k iterations)
+Benchmarking math_float64/tinywasm/dot_product: Analyzing
+math_float64/tinywasm/dot_product
+                        time:   [55.378 µs 55.510 µs 55.653 µs]
+                        change: [-0.2135% +0.0860% +0.4147%] (p = 0.60 > 0.05)
+                        No change in performance detected.
+Found 8 outliers among 100 measurements (8.00%)
+  1 (1.00%) low severe
+  1 (1.00%) low mild
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking math_float64/wasmi/dot_product
+Benchmarking math_float64/wasmi/dot_product: Warming up for 3.0000 s
+Benchmarking math_float64/wasmi/dot_product: Collecting 100 samples in estimated 5.0824 s (111k iterations)
+Benchmarking math_float64/wasmi/dot_product: Analyzing
+math_float64/wasmi/dot_product
+                        time:   [15.716 µs 15.828 µs 15.933 µs]
+                        change: [+5.1897% +6.0691% +6.9033%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) low mild
+Benchmarking math_float64/wasmtime_pulley64/dot_product
+Benchmarking math_float64/wasmtime_pulley64/dot_product: Warming up for 3.0000 s
+Benchmarking math_float64/wasmtime_pulley64/dot_product: Collecting 100 samples in estimated 5.3460 s (20k iterations)
+Benchmarking math_float64/wasmtime_pulley64/dot_product: Analyzing
+math_float64/wasmtime_pulley64/dot_product
+                        time:   [16.307 µs 16.404 µs 16.509 µs]
+                        change: [+0.7741% +1.5081% +2.1962%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking math_float64/wasmtime_jit/dot_product
+Benchmarking math_float64/wasmtime_jit/dot_product: Warming up for 3.0000 s
+Benchmarking math_float64/wasmtime_jit/dot_product: Collecting 100 samples in estimated 6.1860 s (25k iterations)
+Benchmarking math_float64/wasmtime_jit/dot_product: Analyzing
+math_float64/wasmtime_jit/dot_product
+                        time:   [7.6678 µs 7.7931 µs 7.9140 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+
+Benchmarking control_br_table/tinywasm/br_table
+Benchmarking control_br_table/tinywasm/br_table: Warming up for 3.0000 s
+Benchmarking control_br_table/tinywasm/br_table: Collecting 100 samples in estimated 5.0050 s (40k iterations)
+Benchmarking control_br_table/tinywasm/br_table: Analyzing
+control_br_table/tinywasm/br_table
+                        time:   [117.57 µs 117.72 µs 117.87 µs]
+                        change: [-1.6521% -1.0639% -0.5293%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high severe
+Benchmarking control_br_table/wasmi/br_table
+Benchmarking control_br_table/wasmi/br_table: Warming up for 3.0000 s
+Benchmarking control_br_table/wasmi/br_table: Collecting 100 samples in estimated 5.1380 s (141k iterations)
+Benchmarking control_br_table/wasmi/br_table: Analyzing
+control_br_table/wasmi/br_table
+                        time:   [21.400 µs 21.446 µs 21.489 µs]
+                        change: [+0.1198% +0.4483% +0.7509%] (p = 0.01 < 0.05)
+                        Change within noise threshold.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) low severe
+  2 (2.00%) low mild
+Benchmarking control_br_table/wasmtime_pulley64/br_table
+Benchmarking control_br_table/wasmtime_pulley64/br_table: Warming up for 3.0000 s
+Benchmarking control_br_table/wasmtime_pulley64/br_table: Collecting 100 samples in estimated 5.5253 s (20k iterations)
+Benchmarking control_br_table/wasmtime_pulley64/br_table: Analyzing
+control_br_table/wasmtime_pulley64/br_table
+                        time:   [31.132 µs 31.245 µs 31.361 µs]
+                        change: [+0.1636% +0.7568% +1.3272%] (p = 0.01 < 0.05)
+                        Change within noise threshold.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+Benchmarking control_br_table/wasmtime_jit/br_table
+Benchmarking control_br_table/wasmtime_jit/br_table: Warming up for 3.0000 s
+Benchmarking control_br_table/wasmtime_jit/br_table: Collecting 100 samples in estimated 5.4521 s (20k iterations)
+Benchmarking control_br_table/wasmtime_jit/br_table: Analyzing
+control_br_table/wasmtime_jit/br_table
+                        time:   [16.414 µs 16.668 µs 17.006 µs]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+
+Benchmarking call_indirect/tinywasm/indirect_calls
+Benchmarking call_indirect/tinywasm/indirect_calls: Warming up for 3.0000 s
+Benchmarking call_indirect/tinywasm/indirect_calls: Collecting 100 samples in estimated 5.2393 s (56k iterations)
+Benchmarking call_indirect/tinywasm/indirect_calls: Analyzing
+call_indirect/tinywasm/indirect_calls
+                        time:   [75.355 µs 75.480 µs 75.608 µs]
+                        change: [+0.1862% +0.4628% +0.7223%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low severe
+  3 (3.00%) low mild
+  1 (1.00%) high severe
+Benchmarking call_indirect/wasmi/indirect_calls
+Benchmarking call_indirect/wasmi/indirect_calls: Warming up for 3.0000 s
+Benchmarking call_indirect/wasmi/indirect_calls: Collecting 100 samples in estimated 5.1638 s (96k iterations)
+Benchmarking call_indirect/wasmi/indirect_calls: Analyzing
+call_indirect/wasmi/indirect_calls
+                        time:   [34.706 µs 34.755 µs 34.804 µs]
+                        change: [-2.5367% -2.0646% -1.5917%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 10 outliers among 100 measurements (10.00%)
+  1 (1.00%) low severe
+  7 (7.00%) low mild
+  2 (2.00%) high mild
+Benchmarking call_indirect/wasmtime_pulley64/indirect_calls
+Benchmarking call_indirect/wasmtime_pulley64/indirect_calls: Warming up for 3.0000 s
+Benchmarking call_indirect/wasmtime_pulley64/indirect_calls: Collecting 100 samples in estimated 7.5182 s (10k iterations)
+Benchmarking call_indirect/wasmtime_pulley64/indirect_calls: Analyzing
+call_indirect/wasmtime_pulley64/indirect_calls
+                        time:   [50.173 µs 50.343 µs 50.515 µs]
+                        change: [+1.5497% +2.0503% +2.5369%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) low mild
+  3 (3.00%) high mild
+Benchmarking call_indirect/wasmtime_jit/indirect_calls
+Benchmarking call_indirect/wasmtime_jit/indirect_calls: Warming up for 3.0000 s
+Benchmarking call_indirect/wasmtime_jit/indirect_calls: Collecting 100 samples in estimated 7.4627 s (10k iterations)
+Benchmarking call_indirect/wasmtime_jit/indirect_calls: Analyzing
+call_indirect/wasmtime_jit/indirect_calls
+                        time:   [20.345 µs 20.515 µs 20.677 µs]
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+
